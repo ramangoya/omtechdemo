@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+        {% load static %}
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+      <style>
+
+        input[type='text']{
+        width:500px;
+        height:35px;}
+        input[type='text']:hover{
+        background-color:gray;
+        }
+       input[type='submit']{
+        width:200px;
+        height:35px;
+        background-color:purple
+        }
+        input[type='text']:hover{
+        }
+        input[type='text']::placeholder{
+        font-size:25px;
+        padding:5px;
+        }
+
+      </style>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Application Form</title>
+  </head>
+  <body>
+
+
+{% include "./index.html" %}
+<div style="margin:250px">
+<form action="appform" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" placeholder="Enter Your Name" name="key " required>
+    <input type="submit" >
+</form>
+</div>
+{{flog}}:{{0}}
+{% for formdata in studentdata %}
+{% if formdata.name == key %}
+{{flog}}:{{1}}
+<div class="w3-row">
+    <div  class="w3-col s-12">
+<table   style="width:1200px;margin:10px;margin-left:110px" class="w3-table-mix">
+
+    <tr>
+        <th>Name</th>
+        <td>{{formdata.name}}</td>
+    </tr>
+    <tr>
+        <th>Father</th>
+        <td>{{formdata.Father}}</td></tr>
+    <tr>
+        <th>Mother</th>
+         <td>{{formdata.Mother}}</td>
+    </tr>
+    <tr>
+         <th>Gender</th>
+         <td>{{formdata.Gender}}</td>
+    </tr>
+    <tr>
+        <th>DateBirth</th>
+         <td>{{formdata.DateBirth}}</td>
+    </tr>
+    <tr>
+        <th>Category</th>
+         <td>{{formdata.Category}}</td>
+    </tr>
+    <tr>
+        <th>Occupation</th>
+        <td>{{formdata.Occupation}}</td>
+    </tr>
+    <tr>
+        <th>Disability</th>
+        <td>{{formdata.Disability}}</td>
+    </tr>
+    <tr>
+        <th>AddressLine1</th>
+        <td>{{formdata.AddressLine1}}</td>
+
+    </tr>
+    <tr>
+        <th>AddressLine2</th>
+        <td>{{formdata.AddressLine2}}</td>
+    </tr>
+    <tr>
+        <th>AddressLine3</th>
+        <td>{{formdata.AddressLine3}}</td>
+    </tr>
+
+    <tr>
+        <th>City</th>
+        <td>{{formdata.City}}</td></tr>
+    <tr>
+        <th>State</th>
+                <td>{{formdata.State}}</td>
+    </tr>
+    <tr>
+         <th>District</th>
+          <td>{{formdata.District}}</td>
+    </tr>
+    <tr>
+        <th>Pin</th>
+        <td>{{formdata.Pin}}</td>
+    </tr>
+    <tr>
+        <th>Highest_Educational_Qualification</th>
+        <td>{{formdata.Highest_Educational_Qualification}}</td>
+    </tr>
+    <tr>
+        <th>YearOfPassing</th>
+         <td>{{formdata.YearOfPassing}}</td>
+    </tr>
+    <tr>
+        <th>Aadhar_Card_Number</th>
+        <td>{{formdata.Aadhar_Card_Number}}</td>
+    </tr>
+
+</table>
+    </div>
+    </div>
+{% endif %}
+{% if flog == 1 %}
+<h1>Data  found</h1>
+{% endif %}
+{% endfor %}
+
+<!--footer part Start-->
+<div  class="w3-row w3-container w3-purple" >
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16">
+    <a href="logo.png"><img src="{% static '/logo.png' %}" width="70"></a>
+    <h3>Omtech computer society</h3>
+    </div>
+    <div style="width:20%;float:left;margin-left:50px" class="w3-col s3 m6 w3-padding-16">
+        <h3>MENU</h3>
+        <Ol style="list-style-type:none;">
+           <i> <li><a href="home">HOME</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="dca">OUR COURSE</a></li>
+            <li><a href="ntt"> NTT COURSE</a></li>
+            <li><a href="af">AFFILIATION</a></li>
+            <li><a href="online">STUDENT ZONE</a></li>
+            <li><a href="payment">PAYMENT MODE</a></li>
+            <li><a href="inquery">ENQUIRY</a></li>
+            <li><a href="photo">GALLERY</a></li>
+            <li><a href="Contact">CONTACT US</a></li></i>
+        </Ol>
+    </div>
+    <div  class="w3-col s6 l3 m6 w3-padding-16">
+        <h3>Contact</h3>
+        <address>
+            1st Floor Allahabad Bank Baheri
+            Bareilly (U.P)<br>
+            Omtechbly@gmail.com
+            9634809460,7879021209
+        </address>
+    </div>
+
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16 ">
+    <a href="https://www.facebook.com/ComputerEducationBareilly"><img src="{% static '/f.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://www.instagram.com/"><img src="{% static '/i.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://mobile.twitter.com/login"><img src="{% static '/t.png' %}" width="30" class="img w3-image"></a>
+    </div>
+</div>
+</div>
+<div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</div>
+  </body>
+</html>

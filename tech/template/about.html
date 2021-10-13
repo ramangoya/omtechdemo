@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .box123{
+    background-image:url("{% static '/ab.jpg' %}");
+    height:740px;
+    width:auto;
+    background-size:1400px;
+    margin-top:70px;
+    }
+</style>
+</head>
+<body>
+{% include "./index.html" %}
+<div class="box123"></div>
+
+<div class="w3-panel w3-row">
+<!--    <div class="w3-container l12">-->
+<!--    <div class="w3-container w3-col s12 l6">-->
+    <div class="w3-container w3-col  s12 l3">
+        <img src="{% static 'dd.jpg' %}" style="width:90% ;padding:0px;margin:0px">
+    </div>
+
+<div class="w3-container w3-col s12 l12" style="padding-top:20px">
+   <b>Dear Students</b> <br>
+    {% for i in speech_key %}
+    <p>
+        {{i.speech}}
+
+    </p>
+    {% endfor %}
+                                                                                       <p style="text-align:right"><b>Harish Kumar</b></p>
+</div>
+    </div>
+    </div>
+<div  class="w3-row w3-container w3-purple" style="margin-top:200px">
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16">
+    <a href="logo.png"><img src="{% static '/logo.png' %}" width="70"></a>
+    <h3>Omtech computer society</h3>
+    </div>
+    <div style="width:20%;float:left;margin-left:50px" class="w3-col s3 m6 w3-padding-16">
+        <h3>MENU</h3>
+        <Ol style="list-style-type:none;">
+           <i> <li><a href="home">HOME</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="dca">OUR COURSE</a></li>
+            <li><a href="ntt"> NTT COURSE</a></li>
+            <li><a href="af">AFFILIATION</a></li>
+            <li><a href="online">STUDENT ZONE</a></li>
+            <li><a href="payment">PAYMENT MODE</a></li>
+            <li><a href="inquery">ENQUIRY</a></li>
+            <li><a href="photo">GALLERY</a></li>
+            <li><a href="Contact">CONTACT US</a></li></i>
+        </Ol>
+    </div>
+    <div  class="w3-col s6 l3 m6 w3-padding-16">
+        <h3>Contact</h3>
+        <address>
+            1st Floor Allahabad Bank Baheri
+            Bareilly (U.P)<br>
+            Omtechbly@gmail.com
+            9634809460,7879021209
+        </address>
+    </div>
+
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16 ">
+    <a href="https://www.facebook.com/ComputerEducationBareilly"><img src="{% static '/f.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://www.instagram.com/"><img src="{% static '/i.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://mobile.twitter.com/login"><img src="{% static '/t.png' %}" width="30" class="img w3-image"></a>
+    </div>
+</div>
+
+<div style="background:skyblue;text-align:center">
+
+    Copyright © 2021  | All Rights Reserved
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

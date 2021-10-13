@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>payment</title>
+    <style>
+        input{
+        margin-top:20px;
+        }
+         .maindiv{
+			width: 45%;
+			height: 550px;
+			position: absolute;
+			left: 25%;
+			top:20%;
+			box-shadow:5px 5px 30px gray;
+			padding:20px;margin:350px;
+			border-radius:20px;
+			background-size: 100% 100%;
+			transform:translate(-50%,-50%);
+			z-index:-1;
+			}
+    </style>
+</head>
+<body>
+{% include "./index.html" %}
+
+<form  action="order" method="post" enctype="multipart/form-data" class="maindiv" >
+    {% csrf_token %}
+   <h1>Enter Your Address & Other Details</h1><center>
+    <input type="text"  name="name" placeholder="Enter the Name" style="height:35px;width:550px"><br>
+    <input type="text" name="Fathername " placeholder="Enter the Father's Name " style="height:35px;width:550px"><br>
+    <input type="text" name="number" placeholder="Enter the Number" style="height:35px;width:550px"><br>
+    <input type="text" name="course " placeholder="Enter the Course" style="height:35px;width:550px"><br>
+    <input type="text" name="gmail" placeholder="Enter the Gmail" style="height:35px;width:550px"><br>
+    <input type="text" name="address" placeholder="Enter the Address" style="height:35px;width:550px"><br>
+    <input type="text" name="city" placeholder="Enter the City" style="height:35px;width:550px"><br>
+    <input type="text" name="state" placeholder="Enter the State" style="height:35px;width:550px"><br></center>
+    <input type="submit" style="height:40px;width:200px;background-color:green;margin-left:180px" value="Payment">
+</form></div>
+
+
+</body>
+</html>

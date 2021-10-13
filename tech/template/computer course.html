@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>COMPUTER COURSE</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+ <style>
+  .boxcourse{
+        background-image:url("{% static '/course.jpg' %}");
+         height:390px;
+         width:auto;
+         margin-top:70px;
+        }
+ </style>
+</head>
+<body>
+{% include "./index.html" %}
+<div class="boxcourse"></div>
+<p style="font-size:60px;margin-left:190px">RGCSM Course Offered</p>
+<hr>
+<div style="width:120px;background-color:purple;height:30px;line-height:30px;text-align:center;margin-top:40px">
+<ul style="padding:0px;margin:0px">
+<li> <a href="adca"> ADCA</a></li>
+<li> <a href="dca">DCA</a></li>
+<li> <a href="doap">DOAP</a></li>
+<li> <a href="adcp">ADCP</a></li>
+<li><a href="dtp"> DTP</a></li>
+<li> <a href="dipwd">DIPWD</a></li>
+ <li><a href="ccca">CCCA</a></li>
+ <li><a href="rgcit">RG-CIT</a></li>
+ <li><a href="pgdca">PGDCA</a></li>
+ <li><a href="dcad">DCAD</a></li>
+ <li><a href="dctt">DCTT</a></li>
+ <li><a href="dpctt">DPCTT</a></li>
+ <li><a href="dcaa">DCAA</a></li>
+ <li><a href="ccoai">CCOAI</a></li>
+ <li><a href="dmm">DMM</a></li>
+ <li><a href="ccsut">CCSUT</a></li>
+ <li><a href="dit">DIT</a></li>
+ <li><a href="pgdit">PGDIT</a></li>
+ <li><a href="adcaweb">ADCA-WEB</a></li>
+ <li><a href="dma">DMA</a></li>
+ <li><a href="dch">DCH</a></li>
+ <li><a href="adchn">ADCHN</a></li>
+ <li><a href="ntt">NTT</a></li>
+ <li><a href="aecpa">AE-CPA</a></li>
+ <li><a href="iko">IKO</a></li>
+ <li> <a href="ctp">CTP</a></li>
+</ul></div>
+
+</body>
+</html>

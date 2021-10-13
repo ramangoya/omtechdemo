@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+     <!-- Insert to your webpage before the </head> -->
+    <script src="{% static 'sliderengine/jquery.js' %}"></script>
+    <script src="{% static 'sliderengine/amazingslider.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'sliderengine/amazingslider-1.css' %}">
+    <script src="{% static 'sliderengine/initslider-1.js' %}"></script>
+    <!-- End of head section HTML codes -->
+
+
+     <!-- Insert to your webpage before the </head> -->
+<!--    <script src="sliderengine/jquery.js"></script>-->
+<!--    <script src="sliderengine/amazingslider.js"></script>-->
+<!--    <link rel="stylesheet" type="text/css" href="sliderengine/amazingslider-1.css">-->
+<!--    <script src="sliderengine/initslider-1.js"></script>-->
+    <!-- End of head section HTML codes -->
+<style>
+.container{
+position:relative;
+margin-top:20px;}
+
+    .box123{
+    background-image:url("{% static '/first.jpeg' %}");
+    height:500px;
+    width:auto;
+    background-size:1300px;
+    margin-top:70px;
+  /* .maindiv{
+			width: 90%;
+			height: 400px;
+			position: absolute;
+			left: 50%;
+			top:50%;
+			background-image: url("{% static '/3.jpeg' %}");
+			background-size: 100% 100%;
+			transform:translate(-50%,-50%);
+			box-shadow: 1px 2px 10px 10px white;
+			animation: slider 10s infinite linear;
+			margin-top:30px;
+			z-index:-1;
+			}
+		@keyframes slider{
+			0%{ background-image: url("{% static '/first.jpeg' %}"); }
+			35%{background-image: url("{% static '/ab.jpg' %}");}
+			75%{
+				background-image: url("{% static '/g1.jpg' %}");
+			}
+			100%{
+				background-image: url("{% static '/g5.jpg' %}");
+			}
+		}
+  }*/
+	li a{color:#fff;}
+</style>
+</head>
+<body>
+{% include "./index.html" %}
+    <!-- Insert to your webpage where you want to display the slider -->
+    <div class="amazingslider-wrapper" id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1300px;margin:100px auto 0px ;z-index:-1">
+        <div class="amazingslider" id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="{% static 'images/MAK_9588.JPG' %}" />
+                </li>
+                <li><img src="{% static 'images/40.jpg' %}" />
+                </li>
+                <li><img src="{% static 'images/MAK_9703.JPG' %}" />
+                </li>
+                <li><img src="{% static 'images/MAK_9965.JPG' %}" />
+                </li>
+                <li><img src="{% static 'images/MAK_9705.JPG' %}" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="{% static 'images/MAK_9588-tn.JPG' %}" /></li>
+                <li><img src="{% static 'images/40-tn.jpg' %}" /></li>
+                <li><img src="{% static 'images/MAK_9703-tn.JPG' %}" /></li>
+                <li><img src="{% static 'images/MAK_9965-tn.JPG' %}" /></li>
+                <li><img src="{% static 'images/MAK_9705-tn.JPG' %}" /></li>
+            </ul>
+        <div class="amazingslider-engine"><a href="http://amazingslider.com" title="Responsive JavaScript Slider">Responsive JavaScript Slider</a></div>
+        </div>
+    </div>
+    <!-- End of body section HTML codes -->
+<div class="container w3-row" style="z-index:-1">
+    <div id="mytext" style="font-size:50px;text-align:center">
+        Services
+    </div>
+    <div class=" w3-container w3-col s12 l3 m6">
+        <img src="{% static '/p.png' %}">
+        <h2 style="text-align:center"> Programming</h2>
+        <p>
+            We offer training for various programming languages like Java, C, C++, R, .Net, Android, Python, etc. These courses help the students,
+            working as professionals to enhance their career prospects.
+        </p>
+    </div>
+    <div class="w3-container w3-col s12 l3 m6"><img src="{% static '/ms.jpg' %}" style="padding:none">
+        <h2 style="text-align:center">MS Office</h2>
+    <p>We provide full training in MS Office which includes Excel, Word, PowerPoint,
+        etc. Our highly professional certified trainers are here to
+        provide you the best testing training.</p>
+    </div>
+    <div class="w3-container w3-col s12 l3 m6">
+        <img src="{% static '/tally.jpg' %}">
+        <h2 style="text-align:center">Tally</h2>
+    <p>Tally ERP 9 Expert Training Course covers in-depth knowledge to meet the accounting
+        requirements of the industry. We not only teach the concepts but also help you learn;
+        how you can Practically</p>
+    </div>
+    <div class="w3-container w3-col s12 l3 m6">
+        <img src="{% static '/per.jpg' %}">
+        <h2 style="text-align:center">Personality Development</h2>
+    <p>Personality Development courses deal with developing the communication and interpersonal skills of an individual,to help with job interviews,and achieve your
+        career goals.</p>
+    </div>
+</div>
+<div style="padding:50px" class="w3-row l12 s4 m7">
+     <img src="{% static '/why.jpg' %}" class="w3-image">
+</div>
+
+
+<div class="container w3-row" style="position:relative;margin-left:100px;z-index:-1">
+    <div class=" w3-container w3-col s12 l3 m6 w3-card-4  w3-margin" style="width:280px;padding:10px;position:absolute;top:180px;left:120px">
+       <a href="https://student.nielit.gov.in/">
+           <img src="{% static '/NIELIT_IMAGE.jpg' %}"   class="w3-image w3-hover-grayscale" >
+       </a>
+    </div>
+    <div class="w3-container w3-col s12 l3 m6 w3-card-4 "  style="width:250px;padding:10px;position:absolute;top:30px;left:450px">
+        <img src="{% static '/WEB_IMAGE.jpg' %}"  class="w3-image w3-hover-grayscale" >
+    </div>
+    <div class="w3-container w3-col s12 l3 m6  w3-card-4 " style="width:250px;padding:10px;position:absolute;top:200px;left:770px">
+        <img src="{% static '/IOT_IMAGE.jpg' %}"  class="w3-image w3-hover-grayscale" >
+    </div>
+    <div class="w3-container w3-col s13 l3  w3-card-4 " style="width:250px;padding:10px;position:absolute;top:350px;left:450px">
+        <img src="{% static '/DIGITAL_IMAGE.jpg' %}"  class="w3-image w3-hover-grayscale">
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="w3-container s12 l12">
+        <h1 style="color:orange;font-weight:bolder;text-align:center;font-family:arial" class="w3-jumbo">
+            Special Services</h1>
+</div>
+<div class="w3-container w3-row">
+        <div   style="float:left" class="w3-col s12 l6 m6">
+            <img src="{% static 's1.jpg' %}" width="100%" >
+        </div>
+        <div style="float:left;padding:40px;font-size:20px;font-family:arial" class="w3-col s12 l6 m6">
+          <h2 class="w3-text-orange">Diploma in Web Designing (DWD)</h2>
+For the very first time in the town,Omtech Computer Society is offering high class Diploma in Web Designing (DWD). If you are interested in developing attractive web pages or your own website, you can accelerate your practice with this rapid 6 Months course of Web Designing through one of the best institute.
+
+After successful completion of the course you will be rewarded with an official Web Designing Diploma/Certificate.
+        </div>
+
+<div style="font-size:20px;font-family:arial" class="w3-col s12 l6 m6">
+           <h2 class="w3-text-orange">Fashion Designing & Photography Courses</h2>
+<p class="w3-container">Omtech Computer Society offers courses in fashion designing for students to learn how to cultivate and express their creativity. Fashion Designing is a beautiful art and skill that can be evolved in young artists. The course is ideal for the students of 10th or 12th standards. The course is a combination of design technique and creativity that includes design principles, design elements, concepts, history, fashion illustration, fashion management and other components.<br>
+
+If you have interest in Photography then you should start learning it in a professional manner to fulfill your dream photography career. Whether you are interested in animal photography, nature photography, food photography or any other specialized field, this Photography Course in Bareilly would be essential to kick start your journey.
+</p>     </div>
+
+        <DIV  class="w3-col s12 l6 m6">
+            <img src="{% static 's2.jpg' %}" width="100%" class="w3-container w3-padding-large">
+        </DIV>
+
+</div>
+
+<!--Student Reviews Start-->
+<div class="w3-light-gray w3-padding w3-margin">
+
+<div class="w3-row">
+    <div class="w3-col l12 s12 m6">
+
+    <h2>Comment</h2>
+<form action="home" method="post" enctype="multipart/form-data" style="padding:20px" >
+        {% csrf_token %}
+        <input type="text" name="reviewname"  placeholder="YOUR NAME" style="width:500px;border-radius:10px;height:40px"> <BR>
+        <input type="text" name="reviewgmail" PLACEHOLDER="YOUR  Phone Number " style="width:500px;height:40px;border-radius:10px"><BR>
+        <input type="text" name="reviewmessage" PLACEHOLDER="YOUR MESSAGE" style="width:500px;height:100px;border-radius:10px"><BR>
+        <input type="submit"  style="width:100px;margin:10px">
+</form>
+</div>
+
+<!--        for student reviews-->
+        {% for i in object %}
+    <span><h3 style="margin:0px;padding-left:30px">
+        {{i.comment_name}}
+    </h3><br><p style="width:900px;padding-left:30px">
+    {{i.comment_message}}
+    </p><br></span>
+    {% endfor %}
+</div>
+
+    </div>
+
+
+<div  class="w3-row w3-container w3-purple w3-margin-top w3-margin-left w3-margin-right" >
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16">
+    <a href="logo.png"><img src="{% static '/logo.png' %}" width="70"></a>
+    <h3>Omtech computer society</h3>
+    </div>
+    <div style="width:20%;float:left;margin-left:50px" class="w3-col s3 m6 w3-padding-16">
+        <h3>MENU</h3>
+        <Ol style="list-style-type:none;">
+           <i> <li><a href="home">HOME</a></li>
+            <li><a href="aboutus">ABOUT US</a></li>
+            <li><a href="dca">OUR COURSE</a></li>
+            <li><a href="ntt"> NTT COURSE</a></li>
+            <li><a href="af">AFFILIATION</a></li>
+            <li><a href="online">STUDENT ZONE</a></li>
+            <li><a href="payment">PAYMENT MODE</a></li>
+            <li><a href="inquery">ENQUIRY</a></li>
+            <li><a href="photo">GALLERY</a></li>
+            <li><a href="Contact">CONTACT US</a></li></i>
+        </Ol>
+    </div>
+    <div  class="w3-col s6 l3 m6 w3-padding-16">
+        <h3>Contact</h3>
+        <address>
+            1st Floor Allahabad Bank Baheri
+            Bareilly (U.P)<br>
+            Omtechbly@gmail.com
+            9634809460,7879021209
+        </address>
+    </div>
+
+    <div class="w3-col s6 l3 m6 m6 w3-padding-16 ">
+    <a href="https://www.facebook.com/ComputerEducationBareilly"><img src="{% static '/f.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://www.instagram.com/"><img src="{% static '/i.png' %}" width="30" class="img w3-image"></a>
+    <a href="https://mobile.twitter.com/login"><img src="{% static '/t.png' %}" width="30" class="img w3-image"></a>
+    </div>
+</div>
+<div style="background:skyblue;text-align:center" class="w3-blue w3-margin-left w3-margin-right">
+    Copyright © 2021  | All Rights Reserved
+</div>
+</div>
+
+
+
+</body>
+</html>

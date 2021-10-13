@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div><img src="{% static 'logo.png' %}" width="50">
+<div class="title"><h1 align="center">Omtech computer Society </h1>
+<h3 align="center">Admission Form</h3></div></div>
+<h2 class="h21">Applicant's Personal Details</h2>
+
+<form action="application_datails" method="post" enctype="multipart/form-data">
+     {% csrf_token %}
+    <table>
+        <tr>
+            <td>Applicant's Full Name</td><td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td>Father's Name</td><td><input type="text" name="Father" required></td>
+        </tr>
+        <tr>
+            <td>Mother's Name</td><td><input type="text"  name="Mother" required></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><select name="Gender">
+            <option>-----</option><option>Male</option>
+        <option>Famale</option>
+                <option>Other</option></select></td>
+        </tr>
+        <tr>
+            <td>Date of Birth</td><td><input type="date" name="DateBirth"  required></td>
+        </tr>
+        <tr>
+            <td>Category</td><td><select name="Category">
+            <option>-----</option><option>General</option>
+        <option>OBC</option>
+        <option>SC</option>
+        <option>ST</option></select></td>
+        </tr>
+        <tr>
+            <td>Occupation</td><td><input type="text" name="Occupation"></td>
+        </tr>
+         <tr>
+            <td>Disability</td><td><input type="text" name="Disability"></td>
+        </tr>
+    </table>
+        <h2 class="h21">Address Details</h2>
+    <table>
+        <tr>
+            <td>Address Line1</td><td><input type="text" required name="AddressLine1"></td></tr>
+         <tr>   <td>Address Line2</td><td><input type="text" name="AddressLine2"></td>
+        </tr>
+        <tr>
+            <td>Address Line3</td><td><input type="text" name="AddressLine3"></td></tr>
+        <tr>    <td>City Name</td><td><input type="text" name="City" required></td>
+        </tr>
+        <tr>
+            <td>State</td><td><select required name="State">
+            <option>------</option>
+           <option> Andhra Pradesh</option>
+<option>Arunachal Pradesh </option>– Itanagar
+<option>Assam</option> – Dispur
+<option>Bihar</option> – Patna
+<option>Goa</option> – Panaji
+<option>Gujarat</option> – Gandhinagar
+<option>Haryana</option> – Chandigarh
+<option>Himachal Pradesh</option> – Shimla
+<option>Jammu & Kashmir</option> – Srinagar (Winter : Jammu)
+<option>Karnataka</option> – Bengaluru (Bangalooru)
+<option>Kerala</option> – Thiruvananthapuram
+<option>Madhya Pradesh</option> – Bhopal
+<option>Maharashtra</option> – Mumbai
+<option>Manipur</option> – Imphal
+<option>Meghalaya</option> – Shillong
+<option>Mizoram</option> – Aizawl
+<option>Nagaland </option>– Kohima
+<option>Orissa</option> – Bhubaneswar
+<option>Punjab</option> – Chandigarh
+<option>Rajasthan </option>– Jaipur
+<option>Sikkim</option> – Gangtok
+<option>Tamil Nadu</option> – Chennai
+<option>Tripura</option> – Agartala
+<option>Uttar Pradesh </option>– Lucknow
+<option>West Bengal</option> – Kolkata
+<option>Chhattisgarh </option>
+<option>Uttarakhand </option>
+<option>Jharkhand</option>
+<option>Telangana</option>
+        </select></td>
+        </tr>
+         <tr>   <td>District</td><td><SELECT required name="District">
+             <OPTION>------</OPTION>
+                <option> Agra</option>
+<option>Aligarh</option>
+<option>Prayagraj</option>
+<option>Ambedkar Nagar</option>
+<option>Amethi </option>
+<option>Amroha </option>
+<option>Auraiya</option>
+<option>Azamgarh</option>
+<option>Baghpat</option>
+<option>Bahraich</option>
+<option>Ballia</option>
+<option>Balrampur</option>
+<option>Banda</option>
+<option>Barabanki</option>
+<option>Bareilly</option>
+<option>Basti</option>
+<option>Bhadohi</option>
+<option>Bijnor</option>
+<option>Budaun</option>
+<option>Bulandshahr</option>
+<option>Chandauli</option>
+<option>Chitrakoot</option>
+<option>Deoria</option>
+<option>Etah</option>
+<option>Etawah</option>
+<option>Ayodhya </option>
+<option>Farrukhabad</option>
+<option>Fatehpur</option>
+<option>Firozabad</option>
+<option>Gautam Buddha Nagar</option>
+<option>Ghaziabad</option>
+<option>Ghazipur</option>
+<option>Gonda</option>
+<option>Gorakhpur</option>
+<option>Hamirpur</option>
+<option>Hapur </option>
+<option>Hardoi</option>
+<option>Hathras </option><option>
+Jalaun</option>
+<option>Jaunpur</option>
+<option>Jhansi</option>
+<option>Kannauj</option>
+<option>Kanpur Dehat </option>
+<option>Kanpur Nagar</option>
+<option>Kasganj </option>
+<option>Kaushambi</option>
+<option>Kheri</option>
+<option>Kushinagar</option>
+<option>Lalitpur</option>
+<option>Lucknow</option>
+<option>Maharajganj</option>
+<option>Mahoba</option>
+<option>Mainpuri</option>
+<option>Mathura</option>
+<option>Mau</option>
+<option>Meerut</option>
+<option>Mirzapur</option>
+<option>Moradabad</option>
+<option>Muzaffarnagar</option>
+<option>Pilibhit</option>
+<option>Pratapgarh</option>
+<option>Raebareli</option>
+<option>Rampur</option>
+<option>Saharanpur</option>
+<option>Sambhal </option>
+<option>Sant Kabir Nagar</option>
+<option>Shahjahanpur</option>
+<option>Shamli </option>
+<option>Shravasti</option>
+<option>Siddharthnagar</option>
+<option>Sitapur</option>
+<option>Sonbhadra</option>
+<option>Sultanpur</option>
+<option>Unnao</option>
+             <option> Varanasi</option>
+             </OPTION>
+         </SELECT></td>
+        <tr>  <td>Pin Code</td><td><input type="text" name="Pin" ></td>
+        </tr>
+        </table>
+        <h2 class="h21">Educational/Qualification Details</h2>
+    <table>
+        <tr><td>Highest Educational Qualification </td><td><input type="text" required name="Highest_Educational_Qualification"></td></tr>
+        <tr><td>Year Of Passing</td><td><input type="text" required name="YearOfPassing"></td></tr>
+    </table>
+        <h2  class="h21">Identification Details</h2>
+    <table><tr><td>Aadhar Card Number</td><td><input type="text" name="Aadhar_Card_Number" ></td></tr>
+        <tr><td>Upload Photo</td><td>
+            <input type="file"  name="Upload_Photo" size="25" required></td></tr>
+<!--        <input type="file" name="file" placeholder="Upload Image "  required />-->
+        <tr><td>Upload Signature</td><td><input type="file"  name="Upload_Signature" size="25" required></td></tr>
+        <tr><td>Upload Left Hand Thumb Impression</td><td><input type="file"  name="Left_Hand_Thumb_Impression" size="25" required></td></tr>
+    </table>
+    <h2  class="h21">Declaration / घोषणा</h2>
+    <table>
+        <tr>
+            <td style="padding:10px;"><p style="line-height:20px;"> <input type="checkbox" style="padding:0px;margin:0px;width:15px">  I,hereby declare that the particulars submitted by me in the online examination application form of omtech computer society Course are true to the best of my knowledge and belief.    </p> </td> </tr>
+    </table>
+    <input type="submit" style="width:150px;height:30px;background-color:#0000b3;margin:50px;margin-left:500px;color:#fff;border-radius:10px">
+     <button style="width:150px;height:30px;background-color:#0000b3;color:#fff;border-radius:10px">Back</button>
+</form>
+</body>
+</html>
